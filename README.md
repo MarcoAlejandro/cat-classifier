@@ -27,7 +27,7 @@ The idea is document a binnacle of the process and find out what went wrong afte
 
 ## Input data for the model. 
 
-Date: 24/02/2021
+**Date: 24/02/2021**
 
 I need to feed the neural networks using the features vector representations of the images, 
 naturally as `numpy` `ndarray` elements. 
@@ -42,3 +42,14 @@ After loading some images, some points of interest arise:
 - All the images for the training model should have the same size and width, which determines the number of features.
 
 Image resize example code can be found at `learning/pillow/resize/script.py`
+
+**Date: 27/02/2021**
+
+To keep things simple, I'll grab some dataset of cat pictures. Download the images, and delegate the 
+image treatment code to some component that will run at training time. 
+
+I'll download cat pictures from the cat dataset from Kaggle [https://www.kaggle.com/crawford/cat-dataset]. Not all of 
+them, just a few number of pictures ( ~150 ).
+
+Images are in `learning/cats/images.zip`.
+
