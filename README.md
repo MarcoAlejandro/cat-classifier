@@ -53,3 +53,7 @@ them, just a few number of pictures ( ~150 ).
 
 Images are in `learning/cats/images.zip`.
 
+**Date: 03/03/2021**
+
+I've added a module (`project.datasets.images_to_vector`) to read the images and turn them into vectorized data for the models.
+
