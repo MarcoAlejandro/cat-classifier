@@ -13,6 +13,7 @@ The idea is document a binnacle of the process and find out what went wrong afte
 
 - [Project structure](#project-structure)
 - [Input data for the model](#input-data-for-the-model)
+- [Linear regression algorithm](#linear-regression)
 
 -----
 
@@ -57,3 +58,19 @@ Images are in `learning/cats/images.zip`.
 
 I've added a module (`project.datasets.images_to_vector`) to read the images and turn them into vectorized data for the models.
 
+---------
+
+## Logistic Regression
+
+**Date: 07/03/2021**
+
+The logistic regression is a classification algorithm, and a good first way to gain intuition about the concepts 
+used in neural networks such a: 
+
+- Forward and backward propagation
+- Gradient descent
+- Input weights
+- The threshold
+- The activation function
+
+`project/models` contains a module with an implementation of logistic regression. 
