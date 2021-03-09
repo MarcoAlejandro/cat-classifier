@@ -139,3 +139,57 @@ def predict(
 
     return Y_prediction
 
+
+def model(
+        X_train: np.ndarray,
+        Y_train: np.ndarray,
+        X_test: np.ndarray,
+        Y_test: np.ndarray,
+        num_iterations: int = 2000,
+        learning_rate: float = 0.5,
+        print_cost = False
+):
+    """
+    Trains and test the logistic regression model.
+
+    Args:
+        X_train: training set of images, of shape (height * width * 3, number of samples)
+        Y_train: training labels represented by an array of shape (1, number of samples)
+        X_test: test set of images, of shape (height * width * 3, number of test samples)
+        Y_test: test set of labels, represented by an array of shape (1, number of test samples)
+
+    Returns:
+        dictionary containing information about the model.
+    """
+
+    w, b = get_zero_parameters(X_train.shape[0])
+    parameters, gradients, costs = optimize(
+        w,
+        b,
+        X_test,
+        Y_test,
+        num_iterations,
+        learning_rate,
+        print_cost
+    )
+
+    # Optimized values that minimizes the cost.
+    w = gradients["w"]
+    b = gradients["b"]
+
+    Y_prediction_test = predict(w, b, X_test)
+    Y_prediction_train = predict(w, b, X_train)
+
+    # Print train/test Errors
+    print("train accuracy: {} %".format(100 - np.mean(np.abs(Y_prediction_train - Y_train)) * 100))
+    print("test accuracy: {} %".format(100 - np.mean(np.abs(Y_prediction_test - Y_test)) * 100))
+
+    d = {"costs": costs,
+         "Y_prediction_test": Y_prediction_test,
+         "Y_prediction_train": Y_prediction_train,
+         "w": w,
+         "b": b,
+         "learning_rate": learning_rate,
+         "num_iterations": num_iterations}
+
+    return d

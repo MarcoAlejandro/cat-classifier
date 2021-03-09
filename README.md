@@ -13,7 +13,7 @@ The idea is document a binnacle of the process and find out what went wrong afte
 
 - [Project structure](#project-structure)
 - [Input data for the model](#input-data-for-the-model)
-- [Linear regression algorithm](#linear-regression)
+- [Linear regression algorithm](#logistic-regression)
 
 -----
 
@@ -74,3 +74,4 @@ used in neural networks such a:
 - The activation function
 
 `project/models` contains a module with an implementation of logistic regression. 
+
