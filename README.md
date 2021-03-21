@@ -11,6 +11,10 @@ The idea is document a binnacle of the process and find out what went wrong afte
 
 **Development history**
 
+This is a registry for keeping myself accountable. 
+Probably will be deleted when the project is finished, and replaced with a 
+retrospective. 
+
 - [Project structure](#project-structure)
 - [Input data for the model](#input-data-for-the-model)
 - [Linear regression algorithm](#logistic-regression)
@@ -75,3 +79,10 @@ used in neural networks such a:
 
 `project/models` contains a module with an implementation of logistic regression. 
 
+**Date: 20/03/2021**
+
+Added a jupyter notebook for testing the logistic regression module with train
+and testing data. It's not working as expected. I think the algorithms are well 
+written (since unit testing of algorithms is based on Coursera notebook values). 
+
+Maybe the training data is what's wrong. I'm using only cat images.
