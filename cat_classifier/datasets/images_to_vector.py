@@ -89,3 +89,8 @@ def _get_dataset(relative_path: str) -> ndarray:
 
 def get_training_data() -> ndarray:
     return _get_dataset('../cats/training')
+
+
+def get_test_data() -> ndarray:
+    return _get_dataset('../cats/test')
+

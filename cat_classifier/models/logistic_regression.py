@@ -51,7 +51,7 @@ def forward_backward_propagate(
 
     # Computes the value of the activation function each one of the input vectors.
     A = sigmoid(np.dot(w.T, X) + b)
-    cost = -(1/m) * (np.sum(Y*np.log(A)+(1-Y)*np.log(1-A)))
+    cost = 1/m*np.sum(-Y*np.log(A)-(1-Y)*np.log(1-A))
 
     # Given the cost, is possible to perform the gradient descent
     dZ = A - Y
@@ -91,9 +91,11 @@ def optimize(
             X,
             Y
         )
-        costs += cost
-        if cost % 100 == 0 and print_cost:
-            print(f"Cost for iteration {i}: {cost}")
+        if i % 100 == 0:
+            costs.append(cost)
+
+        if i % 100 == 0 and print_cost:
+            print(f"Cost after iteration {i}: {cost}")
 
         w = w - learning_rate * dw
         b = b - learning_rate * db
@@ -174,8 +176,8 @@ def model(
     )
 
     # Optimized values that minimizes the cost.
-    w = gradients["w"]
-    b = gradients["b"]
+    w = parameters["w"]
+    b = parameters["b"]
 
     Y_prediction_test = predict(w, b, X_test)
     Y_prediction_train = predict(w, b, X_train)
