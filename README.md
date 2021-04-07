@@ -96,3 +96,4 @@ The notebook `Logistic Regression .ipynb` trains the model. I still need to inte
 the end, the final cells uses the model to classify two custom images that aren't training/test data, 
 and the result seems to be correct. 
 
+![img.png](img.png)
