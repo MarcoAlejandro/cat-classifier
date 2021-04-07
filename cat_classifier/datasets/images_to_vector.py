@@ -94,3 +94,6 @@ def get_training_data() -> ndarray:
 def get_test_data() -> ndarray:
     return _get_dataset('../cats/test')
 
+
+def get_no_cats_data() -> ndarray:
+    return _get_dataset('../cats/no_cats')

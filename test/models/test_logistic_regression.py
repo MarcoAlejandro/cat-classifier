@@ -1,4 +1,4 @@
-from project.models.logistic_regresssion import (
+from cat_classifier.models.logistic_regression import (
     sigmoid,
     get_zero_parameters,
     forward_backward_propagate,

@@ -57,7 +57,7 @@ def forward_backward_propagate(
     dZ = A - Y
     dw = 1/m * np.dot(X, dZ.T)
     db = 1/m * np.sum(dZ)
-
+    cost = np.squeeze(cost)
     return cost, dw, db
 
 

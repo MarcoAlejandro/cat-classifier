@@ -86,3 +86,13 @@ and testing data. It's not working as expected. I think the algorithms are well
 written (since unit testing of algorithms is based on Coursera notebook values). 
 
 Maybe the training data is what's wrong. I'm using only cat images.
+
+**Date: 07/03/2021**
+
+I had some free time to find no-cats image data. After download it, the logistic regression 
+algorithm seems to be working fine. 
+
+The notebook `Logistic Regression .ipynb` trains the model. I still need to interpret some results, but at 
+the end, the final cells uses the model to classify two custom images that aren't training/test data, 
+and the result seems to be correct. 
+
