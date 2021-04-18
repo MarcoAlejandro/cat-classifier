@@ -48,7 +48,7 @@ def _reshape_vectors(array: ndarray) -> ndarray:
 
 def _get_dataset(relative_path: str) -> ndarray:
     """
-        Returns the input vectors for the training images
+        Returns the input vectors for the cats_training images
     """
     images: ndarray
     images_names = []
@@ -88,12 +88,16 @@ def _get_dataset(relative_path: str) -> ndarray:
 
 
 def get_training_data() -> ndarray:
-    return _get_dataset('../cats/training')
+    return _get_dataset('../cats/cats_training')
 
 
 def get_test_data() -> ndarray:
-    return _get_dataset('../cats/test')
+    return _get_dataset('../cats/cats_test')
 
 
-def get_no_cats_data() -> ndarray:
-    return _get_dataset('../cats/no_cats')
+def get_no_cats_training_data() -> ndarray:
+    return _get_dataset('../cats/no_cats_train')
+
+
+def get_no_cats_test_data() -> ndarray:
+    return _get_dataset('../cats/no_cats_test')

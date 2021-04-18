@@ -46,7 +46,7 @@ def forward_backward_propagate(
                 second element is 'dw', the gradient of the loss with respect to w, thus same shape as w
                 third element 'db' is the gradient of the loss with respect to b, thus same shape as b
     """
-    # m is the number of training samples
+    # m is the number of cats_training samples
     m = X.shape[1]
 
     # Computes the value of the activation function each one of the input vectors.
@@ -152,13 +152,13 @@ def model(
         print_cost = False
 ):
     """
-    Trains and test the logistic regression model.
+    Trains and cats_test the logistic regression model.
 
     Args:
-        X_train: training set of images, of shape (height * width * 3, number of samples)
-        Y_train: training labels represented by an array of shape (1, number of samples)
-        X_test: test set of images, of shape (height * width * 3, number of test samples)
-        Y_test: test set of labels, represented by an array of shape (1, number of test samples)
+        X_train: cats_training set of images, of shape (height * width * 3, number of samples)
+        Y_train: cats_training labels represented by an array of shape (1, number of samples)
+        X_test: cats_test set of images, of shape (height * width * 3, number of cats_test samples)
+        Y_test: cats_test set of labels, represented by an array of shape (1, number of cats_test samples)
 
     Returns:
         dictionary containing information about the model.
@@ -179,10 +179,10 @@ def model(
     w = parameters["w"]
     b = parameters["b"]
 
-    Y_prediction_test = predict(w, b, X_test)
     Y_prediction_train = predict(w, b, X_train)
+    Y_prediction_test = predict(w, b, X_test)
 
-    # Print train/test Errors
+    # Print train/cats_test Errors
     print("train accuracy: {} %".format(100 - np.mean(np.abs(Y_prediction_train - Y_train)) * 100))
     print("test accuracy: {} %".format(100 - np.mean(np.abs(Y_prediction_test - Y_test)) * 100))
 
