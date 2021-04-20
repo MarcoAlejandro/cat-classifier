@@ -1,3 +1,10 @@
+"""
+This module contains the implementation of a logistic regression model
+for image classification.
+
+The model uses the sigmoid function for the logistic regression activation.
+"""
+
 import numpy as np
 
 
